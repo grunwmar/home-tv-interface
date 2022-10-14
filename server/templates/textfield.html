@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Zápisník</h3>
+<form method="post" action="/action/messages/accept">
+  <textarea id="viewer" name="message" class="send-message" placeholder="Nová poznámka">{{content | safe}}</textarea>
+  <input type="submit" class="submit" value="Odeslat" />
+</form>
+{% endblock %}

@@ -1,0 +1,129 @@
+
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #17202A;
+  color: #AEB6BF;
+}
+body, body * {
+  box-sizing: border-box;
+}
+
+#viewer {
+	font-family: 'Courier Prime', monospace;
+	font-size: 1.25em;
+  height: 80vh;
+  overflow: auto;
+  color: #AEB6BF;
+  background-color: #D6DBDF;
+  color: #17202A;
+  padding: 0.5em;
+
+  white-space: pre-wrap;
+}
+
+.markdown a {
+  color: #F7DC6F;
+}
+
+.send-message{
+  width: 100%;
+  padding: 10pt;
+  font-size: 1rem;
+  height: 10vh;
+  border: 1px solid #273746;
+  outline: none;
+  background-color: #85929E;
+  color: #17202A;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #17202A;
+  opacity: 0.66; /* Firefox */
+}
+
+input, button {
+  padding: 0.5em;
+  border: 1px solid #273746;
+  background-color: #212F3C;
+  border-radius: 2.5pt;
+  color: #AEB6BF;
+  font-size: 1.125em;
+}
+
+input[type=text] {
+  background-color: #D6DBDF;
+  color: #17202A;
+}
+
+.button-index{
+  background-color: #212F3C;
+  border: 1px solid #1B2631;
+font-size: 2em;
+}
+
+.table-runnings{
+  width: 90vw;
+
+  border-collapse: collapse;
+}
+
+.table-runnings td, .table-runnings th{
+  border: 1px solid #34495E;
+  padding: 5pt;
+}
+
+.table-runnings th{
+  text-align: left;
+}
+
+.table-runnings a{
+  color: whitesmoke;
+}
+
+input[name=cmd]{
+  width: 60%;
+}
+
+.open-browser{
+  width: 95vw;
+  text-align: center;
+  margin: 2em 0.5em;
+}
+
+.open-browser input[type=text]{
+  width: 60%;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-container a {
+  margin: 0.5em;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+.exec{
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.exec b {
+  margin: 0.5em;
+  font-size: 1.25em;
+}
+.exec input{
+  margin: 0.5em;
+}

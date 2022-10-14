@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hlavní menu</h1>
+
+<div class="open-browser">
+  <form action="/action/command/run::xdg-open" method="post">
+    <input type="text" value="http://" name="cmd" placeholder="url..." autocomplete="off"/>
+    <input type="submit" value="otevřít v prohlížeči" />
+  </form>
+</div>
+
+<div class="flex-container">
+	<a href="/page/desk"><button>Zápisník</button></a>
+  <a href="/page/command"><button>Spustit příkaz</button></a>
+  <a href="/page/turnoff"><button>Vypnout / restartovat počítač</button></a>
+</div>
+{% endblock %}

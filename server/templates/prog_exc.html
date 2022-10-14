@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Spustit příkaz</h1>
+<div>
+    <form action="/action/command/run" method="post" class="flex-container exec">
+      <b>Příkaz</b> <input type="text" value="" name="cmd" placeholder="command" autocomplete="off" />
+      <input type="submit" value="spustit" />
+    </form>
+    <table class="table-runnings">
+    <tr>
+        <th>pid</th>
+        <th>příkaz</th>
+        <th> </th>
+    </tr>
+    {%for proc, cmd, msg, pid in processes %}
+
+      <tr>
+        <td>{{ pid }} <input type="hidden" name="pid" value="{{ pid }}" /></td>
+        <td>{{ cmd }}</td>
+        <td>
+        {% if pid is not none %}
+        <a href="/action/command/terminate:{{ pid }}">ukončit</a>
+        {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="cli-stdout"><pre>{{ msg }}</pre></td>
+      </tr>
+
+      {%endfor%}
+    </table>
+</div>
+{% endblock %}

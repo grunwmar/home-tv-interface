@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Poslat text</h1>
+
+<div class="open-browser">
+  <form action="/send-text/accept" method="post">
+    <input type="text" value="" name="text" placeholder="text" autocomplete="off"/>
+    <input type="submit" value="poslat" />
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <form method="post" action="/turnoff" autocomplete="off" />
+	 <div style="margin:2em 3em;">
+     <input type="radio" name="confirm" id="toff" value="turnoff"/>
+     <label for="toff">Vypnout počítač</label>
+     <input type="radio" name="confirm" id="reboot" value="reboot"/>
+     <label for="tofrebootf">Reboot</label>
+    	</div>
+    <input type="submit" class="submit" value="Potvrdit" />
+  </form>
+{% endblock %}
